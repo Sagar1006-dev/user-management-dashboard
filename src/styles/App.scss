@@ -1,0 +1,130 @@
+/* styles/App.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* ... existing styles ... */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .user-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .user-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f7f8fc;
+}
+
+button.dark-mode {
+    background-color: #222;
+}
+
+.user-item.dark-mode {
+    background-color: #444;
+}
+/* styles/App.css */
+
+button {
+    /* ... existing styles ... */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007BFF;
+}
+
+.user-item {
+    /* ... existing styles ... */
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.user-item:hover {
+    transform: scale(1.05);
+}
+
+// styles/App.scss
+
+$primary-color: #007BFF;
+$dark-bg: #333;
+$light-text: #f7f8fc;
+
+body {
+    font-family: Arial, sans-serif;
+    
+    &.dark-mode {
+        background-color: $dark-bg;
+        color: $light-text;
+    }
+}
+
+button {
+    background-color: $primary-color;
+    color: white;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+.user-item {
+    /* ... other styles ... */
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
